@@ -1,18 +1,18 @@
 package com.company2359.plog.fragments;
 
+import com.company2359.plog.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 
-import com.company2359.plog.R;
-public class PLogFragment extends Fragment implements OnClickListener{
-    
-	private static final String TAG ="PLogFragment";
+public class SettingsFragment extends Fragment implements OnClickListener{
+	
+	private static final String TAG ="SettingsFragment";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -40,4 +40,5 @@ public class PLogFragment extends Fragment implements OnClickListener{
 
 		return root;
 	}
+
 }

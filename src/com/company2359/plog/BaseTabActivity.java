@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public abstract class BaseTabActivity extends FragmentActivity implements OnClickListener {
 	
@@ -19,6 +21,8 @@ public abstract class BaseTabActivity extends FragmentActivity implements OnClic
 	
 	protected int tab_index = 1;
 	View tab_user_profile, tab_calendar, tab_plog, tab_reminders, tab_promos, tab_fan_page, tab_settings;
+	
+	
 	
 	
 	@Override
@@ -52,7 +56,8 @@ public abstract class BaseTabActivity extends FragmentActivity implements OnClic
     	tab_settings.setOnClickListener(this);
     }
     
-    private void setTabStates(){		
+    private void setTabStates(){
+    	final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
     	View current_tab_view=null;
     	switch(tab_index){
     	case TAB_USER_PROFILE:
@@ -83,6 +88,7 @@ public abstract class BaseTabActivity extends FragmentActivity implements OnClic
     	if (current_tab_view!=null){
     		current_tab_view.setSelected(true);
     	}
+    	current_tab_view.startAnimation(animTranslate);
     } 
     
 	@Override

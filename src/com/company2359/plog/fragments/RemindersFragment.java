@@ -1,18 +1,18 @@
 package com.company2359.plog.fragments;
 
+import com.company2359.plog.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 
-import com.company2359.plog.R;
-public class PLogFragment extends Fragment implements OnClickListener{
-    
-	private static final String TAG ="PLogFragment";
+public class RemindersFragment extends Fragment implements OnClickListener{
+	
+	private static final String TAG ="RemindersFragment";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -36,8 +36,9 @@ public class PLogFragment extends Fragment implements OnClickListener{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		Log.d(TAG, "onCreateView");
-		View root = inflater.inflate(R.layout.plog, container,false);
+		View root = inflater.inflate(R.layout.calendar, container,false);
 
 		return root;
 	}
+
 }
