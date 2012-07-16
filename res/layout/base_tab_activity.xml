@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.company2359.plog.views.CustomTextView
+        android:id="@+id/header_title"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_title" />
+
+    <LinearLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_title"
+        android:orientation="vertical"
+        android:background="@drawable/bg_nomoon" >
+    </LinearLayout>
+    <include
+        android:id="@+id/bottom_bar"
+        android:layout_alignParentBottom="true"
+        layout="@layout/tabs_bar" />
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+<LinearLayout
+    android:id="@+id/tabbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!-- tab user profile -->
+    <ImageView
+        android:id="@+id/tab_userprofile"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon_profile" >
+    </ImageView>
+
+    <!-- tab calendar -->
+    <ImageView
+        android:id="@+id/tab_calendar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon_calendar" >
+    </ImageView>
+
+    <!-- tab plog -->
+    <ImageView
+        android:id="@+id/tab_plog"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon_plog" >
+    </ImageView>
+
+    <!-- tab reminders -->
+    <ImageView
+        android:id="@+id/tab_reminders"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon_reminder" >
+    </ImageView>
+
+    <!-- tab promos -->
+    <ImageView
+        android:id="@+id/tab_promos"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon_promotion" >
+    </ImageView>
+
+    <!-- tab fanpge -->
+    <ImageView
+        android:id="@+id/tab_fanpage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon_fanpage" >
+    </ImageView>
+    
+    <!-- tab settings -->
+    <ImageView
+        android:id="@+id/tab_settings"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon_settings" >
+    </ImageView>
+
+</LinearLayout>
+<ImageView android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_item_height"
+        android:layout_below="@+id/tabbar"
+        android:src="@drawable/tab_bottom_logo"
+        android:layout_marginTop="-20dp"/>
+</RelativeLayout>
