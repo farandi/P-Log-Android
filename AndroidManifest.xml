@@ -40,7 +40,10 @@
             android:name=".SettingsActivity"
             android:label="@string/app_name">
         </activity>
-        <provider android:name=".provider.PlogContentProvider"></provider>
+        <provider 
+            android:name=".provider.PlogContentProvider"
+            android:authorities="com.company2359.plog.provider">
+        </provider>
     </application>
 
 </manifest>
