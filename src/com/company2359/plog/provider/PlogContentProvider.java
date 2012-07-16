@@ -19,25 +19,50 @@ public class PlogContentProvider extends ContentProvider{
 
 	//Table Calendar
 	public static final String TABLE_CALENDAR 		= "calendar";
-	public static final String CALENDAR_SYMPTOMS 	= "";
-	public static final String CALENDAR_DATE		= "";
+	public static final String CALENDAR_ID			= "_id";
+	public static final String CALENDAR_SYMPTOMS 	= "symptoms";
+	public static final String CALENDAR_DATE		= "date";
+	public static final String TABLE_CALENDAR_CREATE = "CREATE TABLE " +
+			TABLE_CALENDAR +" ("+ CALENDAR_ID 	+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+			CALENDAR_SYMPTOMS	+ " TEXT, "+
+			CALENDAR_DATE		+ " DATE"
+			+")";
 	
 	//Table PLOG
 	public static final String TABLE_PLOG 			= "plog";
-	public static final String PLOG_START_DATE	 	= "";
-	public static final String PLOG_END_DATE	 	= "";
-	public static final String PLOG_LENGTH			= "";
+	public static final String PLOG_ID				= "_id";
+	public static final String PLOG_START_DATE	 	= "start";
+	public static final String PLOG_END_DATE	 	= "end";
+	public static final String PLOG_LENGTH			= "length";
+	public static final String TABLE_PLOG_CREATE	= "CREATE TABLE "+
+			TABLE_PLOG +" ("+ PLOG_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+			PLOG_START_DATE	+" DATE, "+
+			PLOG_END_DATE	+" DATE, "+
+			PLOG_LENGTH		+" INTEGER"+
+			")";
+	
 	
 	//Table Reminders
 	public static final String TABLE_REMINDERS		= "reminders";
-	public static final String REMINDERS_DATE	 	= "";
-	public static final String REMINDERS_REMINDER 	= "";
-	public static final String REMINDERS_ALARM_DATE	= "";
+	public static final String REMINDERS_ID			= "_id";
+	public static final String REMINDERS_DATE	 	= "date";
+	public static final String REMINDERS_REMINDER 	= "note";
+	public static final String REMINDERS_ALARM_DATE	= "alarm_date";
+	public static final String TABLE_REMINDERS_CREATE = "CREATE TABLE "+
+			TABLE_REMINDERS+" ("+REMINDERS_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+			REMINDERS_DATE		+" DATE, "+
+			REMINDERS_REMINDER	+" TEXT, "+
+			REMINDERS_ALARM_DATE+" DATE"+
+			")";
+	
 	
 	//Table Settings
 	public static final String TABLE_SETTINGS 		= "settings";
-	public static final String SETTINGS_PASS_ON_OFF	= "";
-	public static final String SETTINGS_PASSWORD	= "";
+	public static final String SETTINGS_ID			= "_id";
+	public static final String SETTINGS_PASS_ON_OFF	= "toggle";
+	public static final String SETTINGS_PASSWORD	= "password";
+	
+	
 	
 	private static class DatabaseHelper extends SQLiteOpenHelper{
 

@@ -18,12 +18,29 @@
             android:name=".PLogActivity"
             android:label="@string/app_name" >
         </activity>
-                <activity android:name="SplashScreen">
-                    <intent-filter>
-                		<action android:name="android.intent.action.MAIN" />
-                		<category android:name="android.intent.category.LAUNCHER" />
-            		</intent-filter>
-                </activity>
+        <activity android:name="SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FanPageActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".PromosActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".ReminderActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/app_name">
+        </activity>
+        <provider android:name=".provider.PlogContentProvider"></provider>
     </application>
 
 </manifest>
